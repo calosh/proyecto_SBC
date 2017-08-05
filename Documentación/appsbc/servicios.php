@@ -1,18 +1,17 @@
 <?php
 include_once 'template_head.php';
 ?>
+<meta charset="utf-8">
 	<div class="body3">
 		<div class="main">
-<!-- content -->
+<!-- content --><center><h2 class="under">Resultados de la Búsqueda</h2></center>
 			<article id="content">
 				<?php
 				$sparql_query = "select distinct ?video ?source ?title from <http://localhost:8890/videos>  where {" . 
 ((isset($_GET['busq_tipo']) && $_GET['busq_tipo'] === "on") ?
 	(
 		// caso verdadero
-		"?video <http://videosmusicales.org/ontology/belong> <http://videosmusicales.org/videos/" .
-		$_GET['tipo'] .
-		"> . "
+		"?video <http://videosmusicales.org/ontology/belong> <http://videosmusicales.org/videos/" .	$_GET['tipo'] .	"> . "
 	) : 
 		"" // caso falso
 	) .
@@ -43,7 +42,7 @@ include_once 'template_head.php';
            		
 	            foreach( $dataTypes as $row )
                 {
-                	echo "<a href='recomendaciones.php?video=". $row['source'] . "'>" . $row['title'] . "</a><br>";
+                	echo "<center><a href='recomendaciones.php?video=". $row['source'] . "'>" . $row['title'] . "</a><br></center>";
                   //$Victima[]=array("count"=>$row["count"]);
                   	
                  }
@@ -58,25 +57,24 @@ include_once 'template_head.php';
 			<article id="content2">
 				<div class="wrapper">
 					<section class="col3">
-						<h4>Why Us?</h4>
+						<h4>Sobre Que se Trata?</h4>
 						<ul class="list1">
-							<li><a href="#">Lorem ipsum dolor sit</a></li>
-							<li><a href="#">Dmet, consectetur</a></li>
-							<li><a href="#">Adipisicing elit eiusmod </a></li>
-							<li><a href="#">Tempor incididunt ut</a></li>
+							<li><a href="#">Artístas</a></li>
+							<li><a href="#">Cantantes</a></li>
+							<li><a href="#">Cantantes Ecuatorianos</a></li>
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>Address</h4>
+						<h4>Dirección</h4>
 						<ul class="address">
-							<li><span>Country:</span>USA</li>
-							<li><span>City:</span>San Diego</li>
-							<li><span>Phone:</span>8 800 154-45-67</li>
-							<li><span>Email:</span><a href="mailto:">progress@mail.com</a></li>
+							<li><span>País:</span>Ecuador</li>
+							<li><span>Ciudad:</span>Loja</li>
+							<li><span>Teléfono:</span>0956784345</li>
+							<li><span>Email:</span><a href="mailto:">wicaraguay@gmail.com</a></li>
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>Follow Us</h4>
+						<h4>Redes Sociales</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>

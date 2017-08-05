@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta charset="utf-8">
 
 <?php 
 extract($_GET); 
@@ -21,6 +22,11 @@ require_once( "lib/sparqllib.php" );
 <script type="text/javascript" src="js/tms_presets.js"></script>
 <script type="text/javascript" src="js/jcarousellite.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+
+
+
+
   <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
@@ -40,13 +46,13 @@ require_once( "lib/sparqllib.php" );
 <!-- header -->
 			<header>
 				<div class="wrapper">
-				<h1><a href="index.html" id="logo">Sistema Recomendador de Producciones Musicales</a></h1>
+				<h1><a href="index.php" id="logo">Sistema Recomendador de Producciones Musicales</a></h1>
 				<nav>
 					<ul id="menu">
 						<li id="nav1"><a href="index.php">Inicio<span>Principal!</span></a></li>
 						<li id="nav2"><a href="actividad.php">Consultas<span>Reciente</span></a></li>
-						<li id="nav3"><a href="servicios.php">Resultados<span>para tí</span></a></li>
-						
+						<li id="nav3"><a href="servicios.php">Todos los Artístas<span>para tí</span></a></li>
+						<li id="nav4"><a href="graficas.php">Estadísticas<span>Gráficas</span></a></li>
 					</ul>
 				</nav>
 				</div>

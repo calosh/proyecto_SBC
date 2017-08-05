@@ -2,6 +2,7 @@
 include_once 'template_head.php';
 ?>
 	<div class="body3">
+	<meta charset="utf-8">
 		<div class="main">
 <!-- content -->
 			<article id="content">
@@ -40,12 +41,19 @@ include_once 'template_head.php';
 			<?php
 					//if (isset($row['descripcion'])) 
 					//secho "<p>" . $row['descripcion'] . "</p>";
+					echo "<h3>Artísta Ecuatoriano(a)</h3>";
 					echo "<p>" . $row['artista'] . "</p>";
+					echo "<h3>Tipo de Video de Youtube</h3>";
 					echo "<p>" . $row['tipo'] . "</p>";
+					echo "<h3>Fecha de Publicación del Video</h3>";
 					echo "<p>" . $row['fecha'] . "</p>";
-					echo "<p> nombre para enlace a youtube " . $row['canal'] . "</p>";
-					echo "<p> enlace a youtube " . $row['canal_id'] . "</p>";
+					echo "<h3>Genero Musical</h3>";
 					echo "<p>" . $row['genre'] . "</p>";
+					echo "<h3>Canal del Artísta en Youtube de ". $row['artista'] ."</h3>";
+					echo "<p>" . $row['canal'] . "</p>";
+					echo "<h3>Enlace del Canal</h3>";
+					echo "<p><a href='https://www.youtube.com/channel/". $row['canal_id'] . "'>https://www.youtube.com/channel/". $row['canal_id'] . "</a></p>";
+					//echo "<p> enlace a youtube " . $row['canal_id'] . "</p>";
 
 
                  }
@@ -54,53 +62,6 @@ include_once 'template_head.php';
 			</center>
 
 
-
-
-				<!--div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Gerardo Morán</h3>
-							<figure><img src="https://i.ytimg.com/vi/1fMIdQP94GQ/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDFRB793OqMaLaFpg4f0vAgHlGQSg" alt=""></figure>
-							<p class="pad_bot1">Lejos de Ti </p>
-							<a href="https://www.youtube.com/watch?v=1fMIdQP94GQ" class="link1">Ver Más</a>
-						</div>
-						<div class="wrapper">
-							<h3><span class="dropcap">4</span>J. Luis del Hierro</h3>
-							<figure><img src="https://i.ytimg.com/vi/-GjpNEWKDvg/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnzu4NEY-_FDUdRD55XJj_fTyMNw" alt=""></figure>
-							<p class="pad_bot1">Prisionero</p>
-							<a href="https://www.youtube.com/watch?v=-GjpNEWKDvg&list=PLVLnLa75lCTTaho6AEPdMRnpvCgiL7_6v" class="link1">Ver Más</a>
-						</div>
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Daniel Betancourth</h3>
-							<figure><img src="https://i.ytimg.com/vi/0MvRQhcBiDo/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB_vvFfXt0wJXzvB02XuHrjqFEEHw" alt=""></figure>
-							<p class="pad_bot1">Tus Colores</p>
-							<a href="https://www.youtube.com/watch?v=0MvRQhcBiDo" class="link1">Ver Más</a>
-						</div>
-						<div class="wrapper">
-							<h3><span class="dropcap">5</span>Daniel Betancourth</h3>
-							<figure><img src="https://i.ytimg.com/vi/pCraX5gksYk/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAJ07X3ri6vgU3UXU5q2eB9mNc8JA" alt=""></figure>
-							<p class="pad_bot1">Exótica.</p>
-							<a href="https://www.youtube.com/watch?v=pCraX5gksYk" class="link1">Ver Más</a>
-						</div>
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>J. Fernando Velasco</h3>
-							<figure><img src="https://i.ytimg.com/vi/aEFUuksN3SM/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBzrUH9b9lyITF8sIeRtKo-pDMK9A" alt=""></figure>
-							<p class="pad_bot1">Hoy que no estás</p>
-							<a href="https://www.youtube.com/watch?v=aEFUuksN3SM" class="link1">Ver Más</a>
-						</div>
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>J. Fernando Velasco</h3>
-							<figure><img src="https://i.ytimg.com/vi/VIBJpFURBSg/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB_3MC7oekeUbFSE9Z_Erv_WJhrhw" alt=""></figure>
-							<p class="pad_bot1">Tu no me perteneces</p>
-							<a href="https://www.youtube.com/watch?v=VIBJpFURBSg" class="link1">Ver Más</a>
-						</div>
-					</section>
-				</div-->
-
 			</article>
 		</div>
 	</div>
@@ -108,27 +69,31 @@ include_once 'template_head.php';
 		<div class="main">
 			<article id="content2">
 				<div class="wrapper">
-					
-					
+					<section class="col3">
+						<h4>Sobre Que se Trata?</h4>
+						<ul class="list1">
+							<li><a href="#">Artístas</a></li>
+							<li><a href="#">Cantantes</a></li>
+							<li><a href="#">Cantantes Ecuatorianos</a></li>
+						</ul>
+					</section>
 					<section class="col3 pad_left2">
-						<h4>Follow Us</h4>
+						<h4>Dirección</h4>
+						<ul class="address">
+							<li><span>País:</span>Ecuador</li>
+							<li><span>Ciudad:</span>Loja</li>
+							<li><span>Teléfono:</span>0956784345</li>
+							<li><span>Email:</span><a href="mailto:">wicaraguay@gmail.com</a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Redes Sociales</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
 							<li><a href="#"><img src="images/icon3.jpg" alt="">LinkedIn</a></li>
 							<li><a href="#"><img src="images/icon4.jpg" alt="">Delicious</a></li>
 						</ul>
-					</section>
-					<section class="col2 right">
-						<h4>Newsletter</h4>
-						<form id="newsletter" method="post">
-							<div>
-								<div class="wrapper">
-									<input class="input" type="text" value="Type Your Email Here"  onblur="if(this.value=='') this.value='Type Your Email Here'" onFocus="if(this.value =='Type Your Email Here' ) this.value=''" >
-								</div>
-								<a href="#" class="button" onClick="document.getElementById('newsletter').submit()">Subscribe</a>
-							</div>
-						</form>
 					</section>
 				</div>
 			</article>
